@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('chapters', function (Blueprint $table) {
             $table->id();
+
+            $table->tinyInteger('number');
+            $table->string('name');
+
+            $table->smallInteger('number_of_verses');
+            $table->enum('revelation', ['MC', 'MD'])->default('MD');
+
+            $table->tinyInteger('chronological_order');
+            $table->boolean('has_sajda');
+
             $table->timestamps();
         });
     }
