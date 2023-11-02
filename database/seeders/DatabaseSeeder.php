@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             JuzSeeder::class,
             HizbSeeder::class,
             ChapterSeeder::class,
+            VerseSeeder::class,
         ]);
     }
 }
