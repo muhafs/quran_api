@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('verses', function (Blueprint $table) {
+        Schema::create('juzs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('chapter_id')->constrained();
 
-            $table->smallInteger('number');
-            $table->string('text');
-
-            $table->boolean('sajda')->default(0);
+            $table->tinyInteger('number');
 
             $table->timestamps();
         });
@@ -29,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('verses');
+        Schema::dropIfExists('juzs');
     }
 };
