@@ -11,6 +11,16 @@ class Verse extends Model
 
     protected $guarded = ['id'];
 
+    public function juz()
+    {
+        return $this->belongsTo(Juz::class);
+    }
+
+    public function hizb()
+    {
+        return $this->belongsTo(Hizb::class);
+    }
+
     public function chapter()
     {
         return $this->belongsTo(Chapter::class);
