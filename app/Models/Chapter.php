@@ -11,6 +11,11 @@ class Chapter extends Model
 
     protected $guarded = ['id'];
 
+    public function juz()
+    {
+        return $this->belongsTo(Juz::class);
+    }
+
     public function verses()
     {
         return $this->hasMany(Verse::class);
