@@ -16,6 +16,11 @@ class Chapter extends Model
         return $this->belongsTo(Juz::class);
     }
 
+    public function hizb()
+    {
+        return $this->belongsTo(Hizb::class);
+    }
+
     public function verses()
     {
         return $this->hasMany(Verse::class);

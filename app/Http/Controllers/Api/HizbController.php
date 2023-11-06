@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Models\Juz;
+use App\Models\Hizb;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class JuzController extends Controller
+class HizbController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +27,7 @@ class JuzController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Juz $juz)
+    public function show(Hizb $hizb)
     {
         //
     }
@@ -34,7 +35,7 @@ class JuzController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Juz $juz)
+    public function update(Request $request, Hizb $hizb)
     {
         //
     }
@@ -42,7 +43,7 @@ class JuzController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Juz $juz)
+    public function destroy(Hizb $hizb)
     {
         //
     }
