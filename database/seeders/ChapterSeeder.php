@@ -23,7 +23,7 @@ class ChapterSeeder extends Seeder
                     'name' => $data['1'],
                     'number_of_verses' => $data['2'],
                     'revelation' => $data['3'],
-                    'chronological_order' => $data['4'],
+                    'sequence' => $data['4'],
                     'has_sajda' => $data['5'],
                     'juz_id' => $data['6'],
                     'hizb_id' => $data['7'],

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->smallInteger('number_of_verses');
             $table->enum('revelation', ['MC', 'MD'])->default('MD');
 
-            $table->tinyInteger('chronological_order');
+            $table->tinyInteger('sequence');
             $table->boolean('has_sajda')->default(0);
 
             $table->timestamps();
