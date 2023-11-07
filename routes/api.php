@@ -18,4 +18,5 @@ use App\Http\Controllers\Api\ChapterController;
 
 Route::controller(ChapterController::class)->group(function () {
     Route::get('chapters', 'index');
+    Route::get('chapters/{id}', 'show');
 });
