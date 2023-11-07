@@ -1,22 +1,14 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\VerseController;
 use App\Http\Controllers\Api\ChapterController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
-
-
 Route::controller(ChapterController::class)->group(function () {
-    Route::get('chapters', 'index');
-    Route::get('chapters/{id}', 'show');
+    Route::get('chapters', 'chapters');
+    Route::get('chapters/{id}', 'chapter');
+});
+
+Route::controller(VerseController::class)->group(function () {
+    Route::get('chapters/{chapterID}/{verseID}', 'verse');
 });

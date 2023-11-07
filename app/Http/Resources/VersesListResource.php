@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class VerseResource extends JsonResource
+class VersesListResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -23,7 +23,6 @@ class VerseResource extends JsonResource
 
             'juz' => $this->juz_id,
             'hizb' => $this->hizb_id,
-            'chapter' => new ChapterResource($this->chapter)
         ];
     }
 }
