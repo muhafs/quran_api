@@ -22,7 +22,7 @@ class ChapterResource extends JsonResource
             'revelation' => $this->revelation == 'MC' ? 'Makkiyah' : 'Madaniyah',
             'sequence' => $this->sequence,
             'has_sajda' => $this->has_sajda ? true : false,
-            'verses' => VerseResource::collection($this->verses),
+            'verses' => VersesListResource::collection($this->whenLoaded('verses')),
         ];
     }
 }

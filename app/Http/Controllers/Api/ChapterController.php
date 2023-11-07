@@ -10,16 +10,16 @@ use App\Http\Resources\ChaptersListResource;
 
 class ChapterController extends Controller
 {
-    public function index()
+    public function chapters()
     {
         $chapters = Chapter::orderBy('number', 'asc')->paginate(15);
 
         return ChaptersListResource::collection($chapters);
     }
 
-    public function show($id)
+    public function chapter($id)
     {
-        $chapter = Chapter::find($id);
+        $chapter = Chapter::with('verses')->find($id);
 
         return new ChapterResource($chapter);
     }
