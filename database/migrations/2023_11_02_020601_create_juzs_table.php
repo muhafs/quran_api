@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
 
             $table->tinyInteger('number');
+            $table->text('first_verse');
+            $table->text('last_verse');
 
             $table->timestamps();
         });
