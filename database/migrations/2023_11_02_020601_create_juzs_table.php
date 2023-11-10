@@ -15,8 +15,12 @@ return new class extends Migration
             $table->id();
 
             $table->tinyInteger('number');
+
             $table->text('first_verse');
+            $table->smallInteger('first_verse_id');
+
             $table->text('last_verse');
+            $table->smallInteger('last_verse_id');
 
             $table->timestamps();
         });

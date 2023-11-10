@@ -21,7 +21,9 @@ class JuzSeeder extends Seeder
                 Juz::create([
                     'number' => $data['0'],
                     'first_verse' => $data['1'],
-                    'last_verse' => $data['2'],
+                    'first_verse_id' => $data['2'],
+                    'last_verse' => $data['3'],
+                    'last_verse_id' => $data['4'],
                 ]);
             }
             $juzRow = false;

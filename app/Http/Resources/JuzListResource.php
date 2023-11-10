@@ -17,9 +17,13 @@ class JuzListResource extends JsonResource
         return [
             'id' => $this->id,
             'number' => $this->number,
-            'verse' => [
-                'first' => $this->first_verse,
-                'last' => $this->last_verse,
+            'first_verse' => [
+                'id' => $this->first_verse_id,
+                'text' => $this->first_verse,
+            ],
+            'last_verse' => [
+                'id' => $this->last_verse_id,
+                'text' => $this->last_verse,
             ],
             'chapters' => ChaptersListResource::collection($this->chapters),
         ];
