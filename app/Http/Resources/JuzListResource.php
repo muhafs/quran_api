@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class VerseResource extends JsonResource
+class JuzListResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,13 +17,11 @@ class VerseResource extends JsonResource
         return [
             'id' => $this->id,
             'number' => $this->number,
-            'text' => $this->text,
-            'page' => $this->page,
-            'sajda' => $this->sajda ? true : false,
-
-            'juz' => $this->juz_id,
-            'hizb' => $this->hizb_id,
-            'chapter' => new ChapterResource($this->whenLoaded('chapter'))
+            'verse' => [
+                'first' => $this->first_verse,
+                'last' => $this->last_verse,
+            ],
+            'chapters' => ChaptersListResource::collection($this->chapters),
         ];
     }
 }
