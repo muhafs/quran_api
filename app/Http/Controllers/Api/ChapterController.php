@@ -17,9 +17,9 @@ class ChapterController extends Controller
         return ChaptersListResource::collection($chapters);
     }
 
-    public function chapter($id)
+    public function chapter($chapterID)
     {
-        $chapter = Chapter::with('verses')->find($id);
+        $chapter = Chapter::with('verses')->find($chapterID);
 
         return new ChapterResource($chapter);
     }

@@ -7,7 +7,7 @@ use App\Http\Controllers\Api\ChapterController;
 
 Route::controller(ChapterController::class)->group(function () {
     Route::get('chapters', 'chapters');
-    Route::get('chapters/{id}', 'chapter');
+    Route::get('chapters/{chapterID}', 'chapter');
 });
 
 Route::controller(VerseController::class)->group(function () {
